@@ -5,6 +5,69 @@ body, html {
     font-family: monospace, serif;
 }
 
+/* Sidebar Styles */
+.sidebar {
+    background-color: black; /* Dark background color */
+    color: #fff;
+    width: 280px; /* Adjust the width as needed */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 20px;
+}
+
+.profile-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-info img {
+    width: 100px; /* Adjust the image size */
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    display: block;
+}
+
+.profile-name {
+    font-size: 24px;
+    margin: 0;
+}
+
+.profile-title {
+    font-size: 14px;
+    margin: 0;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-item {
+    margin-bottom: 10px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 19px;
+    transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.menu-item a:hover {
+    color: #FF5733; /* Change text color on hover */
+    background-color: #1C4A44; /* Slight background color change on hover */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow on hover */
+}
+
+/* Content Styles */
+.content {
+    margin-left: 300px; /* Adjust the margin to match sidebar width */
+    padding: 20px;
+}
+
 
 /* HEADER */
 .header {
@@ -39,23 +102,23 @@ p {
 
 /* LINKS */
 #boxes {
-    position:absolute;
-    content: "";
-    display: table;
-    font-size: 30px;
-    clear: both;
-    width: 100%;
-    text-align: center;
-    text-anchor: middle;
+    /* position:absolute; */
+    /* content: ""; */
+    /* display: table; */
+    /* font-size: 30px; */
+    /* clear: both; */
+    /* width: 100%; */
+    /* text-align: center; */
+    /* text-anchor: middle; */
 }
 
 .link {
     float: left;
-    height: 40px;
+    /* height: 40px; */
     margin:0;
     border:0;
     text-decoration:none;
-    font-size: 30px;
+    /* font-size: 30px; */
     width: 16.666%;
     color:antiquewhite;
     padding-top: 10px;
@@ -105,6 +168,84 @@ a.link:hover, a.link:active {
     width: 100%;
     float: left;
 }
+#indexboxez {
+    /* position:absolute; */
+    /* content: ""; */
+    /* color:antiquewhite; */
+    /* text-anchor: middle; */
+    position:absolute;
+    content: "";
+    display: table;
+    font-size: 30px;
+    clear: both;
+    width: 100%;
+    float: left;
+    height:3000px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.blog-post {
+    background-color: #E0E5E5; /* Light blue/green background */
+    border: 2px solid #1C4A44; /* Forest green border color */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px;
+    transition: transform 0.3s;
+}
+
+.blog-post:hover {
+    transform: scale(1.05);
+}
+
+.post-title {
+    font-size: 24px;
+    margin: 0;
+    color: #3C6E71; /* Dark green/blue title color */
+    text-shadow: 1px 1px 1px #000;
+    transition: color 0.3s;
+}
+
+.post-title:hover {
+    color: #1C4A44; /* Darker forest green on hover */
+}
+
+.post-meta {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #7A9A96; /* Softer green/blue for meta */
+}
+
+.post-meta:hover {
+    color: #2C564E; /* Darker green/blue on hover */
+}
+
+.post-content {
+    font-size: 16px;
+}
+
+.read-more {
+    display: inline-block;
+    background-color: #1C4A44; /* Forest green button background color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid #1C4A44;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.read-more:hover {
+    background-color: #132E2A; /* Darker forest green on hover */
+}
 
 #block1 {
     background-color:rgb(0, 0, 0);
@@ -128,9 +269,13 @@ a.link:hover, a.link:active {
     text-align: center;
     width: 100%;
     
-    height: auto;
-    position: relative;
+    /* height: auto; */
+    /* position: relative; */
     font-family: monospace, serif;
+}
+
+#restofpage {
+    width:100%;
 }
 
 #skillsBlock {
