@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quinn Gleadell</title>
+    <!-- <link rel="stylesheet" href="app.css"> -->
+    <link id="changeStyle" rel="stylesheet" href="app.css">
+</head>
+<body>
+    <!-- Image background + header + links -->
+    <div id="imgBack">
+        <div class="header">
+            <a href="#default" class="title">Portfolio</a>
+        </div>
+        <main id="boxes">
+            <a class="link"  id="linkslol" href="index.html">Home</a>
+            <a class="link"  id="linkslol" href="AboutMe.html">About Me</a>
+            <a class="link"  id="linkslol" href="portfolio.html">Portfolio</a>
+            <a class="link"  id="linkslol" href="qualifications.html">Qualifications</a>
+            <a class="link"  id="linkslol" href="service.html">Service</a>
+            <a class="link"  id="linkslol" href="gpt_page.html">Chat GPT page</a>
+        </main>
+    </div>
+    <!-- contact area -->
+    <div>
+        <main id="boxes2">
+            <div id="block1">
+                <p><i>"Don&#8217t wait until you&#8217ve reached your goal to be proud of yourself. Be proud of every step you take towards reaching that goal"</i></p>
+            </div> 
+            <div id="projects">
+                <div id="projecttext">
+                    <h4><a href="https://qsgleadell-portfolio.carrd.co/" target="_blank">Click here to see my art portfolio</a></h4>
+                    <h3>Y86 processor Team Project</h3>
+                    <a href="https://docs.google.com/document/d/12sW9MONjF5e-Z8zFPJ6Udtc5-DHj90OWldeMZUKyVp4/edit?usp=sharing" target="_blank">Link to lab report</a>
+                    <p> 
+                        Designed and verified a simple scaled down version of the processor - instruction fetch, 
+                        decoder, control, ALU, registers, data memory read-write and data path components.
+                        The final product was able to execute any program written using the Y86-64 ISA. 
+                        This project allowed me to learn more about how programs that are executed in a computer, and the 
+                        issues around program loading and boot-loading. 
+                        In addition to working on the processor components, we created timing diagrams that simulates the timing and output of each stage.
+                    </p>
+                    <br>
+                    <h3>Kirby "Scuffed" Star Ultra</h3>
+                    <a href="https://drive.google.com/drive/folders/1CqINBdqEx2AVK4NzYfaKbYDgabGiTBv6?usp=sharing" target="_blank">You can find the .jar file here.</a>
+                    <p>
+                        Collaborated with a team to produce a simple, functional game. 
+                        We spent a week designing and planning, then implemented our own version of Kirby Super Star Ultra's 
+                        Wispy Woods level. 
+                    </p>
+                    <br>
+                    <h3>Super Mario Bros</h3>
+                    <a href="https://drive.google.com/drive/folders/15XHFNtPolOTh6JgJRTZ1LXvUUxtZ-pRs?usp=sharing" target="_blank">You can find the .jar file here.</a>
+                    <p>
+                        Took inspiration from the original Mario game to build a Mario platformer in Greenfoot. 
+                        I utilized my object oriented programming skills to constructed my own level. Mario moves left & right, 
+                        as well as crouch, with the arrow keys. Mario must avoid the Goomba enemies, holes, and piranha plants. I also created a Mario ability. 
+                        Once the player obtains a "fire flower" from a mystery block, they are able to shoot fireballs. 
+                        This required coding + trigonometry to help the fireballs look natural. 
+                    </p>
+                    <br>
+                    <h3>Flappy Fish</h3>
+                    <a href="https://drive.google.com/drive/folders/1hn3B_IProYQw2mDUWVp-zL3gBIzy6XMh?usp=sharing" target="blank">You can find the .jar file here.</a>
+                    <p>
+                        Took inspiration from the original Flappy Bird game to build a platformer in Greenfoot. 
+                        Flappy "Fish" was my own spin on it. I created my own sprites, background, and animated the fish. 
+                        If you keep playing, it will keep track of your highest score.  
+                    </p>
+                    <br>
+                </div>
+                <div id="projectimgs">
+                    <img class="projimgs" src="pictures/processor.png" style="height:450px">
+                    <img class="projimgs" src="pictures/superstarkirby.png" style="width: 600px">
+                    <img class="projimgs" src="pictures/marioScreenshot.png" style="height: 450px">
+                    <img class="projimgs" src="pictures/flapfish.png" style="height: 450px">
+                </div>
+            </div>
+            <div id="block2">
+                <div class="contact">qs.gleadell@tamu.edu</div>
+                <div class="contact">sophiemg.1222@gmail.com</div>
+                <div class="contact"><a href="https://www.linkedin.com/in/sophie-gleadell-13990120b/" target="_blank">LinkedIn</a></div>
+                <div class="contact"><a href="https://github.com/qsgleadell" target="_blank">GitHub</a></div>
+                <div class="contact"><button type="button" id="changeStyle" onclick="toggleStyleSheet()">Change Style</button></div>
+            </div>
+        </main>
+    </div>
+    <script src="functions.js"></script>
+</body>
+</html>

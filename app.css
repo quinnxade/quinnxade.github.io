@@ -1,0 +1,277 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    background: #2a363b;
+    font-family: monospace, serif;
+}
+
+
+/* HEADER */
+.header {
+    background-color: #1b2225;
+    opacity: 80%;
+    text-align: center;
+    width:100%;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    margin: 0;
+    height: 80px;
+  }
+
+.header a.title {
+    text-align: center;
+    font-weight: 400;
+    color:antiquewhite;
+    text-decoration: #99B898 underline dashed;
+    font-size: 50px;
+    /* font-family: Segoe UI, Futura, Arial, sans-serif; */
+    font-family: monospace, serif;
+}
+
+.header a.title:hover {
+    opacity: 1;
+    color:rgb(119, 40, 53);
+}
+
+p {
+    line-height: 1.75;
+}
+
+/* LINKS */
+#boxes {
+    position:absolute;
+    content: "";
+    display: table;
+    font-size: 30px;
+    clear: both;
+    width: 100%;
+    text-align: center;
+    text-anchor: middle;
+}
+
+.link {
+    float: left;
+    height: 40px;
+    margin:0;
+    border:0;
+    text-decoration:none;
+    font-size: 30px;
+    width: 16.666%;
+    color:antiquewhite;
+    padding-top: 10px;
+    background-color: #000000;
+}
+
+
+a.link:hover, a.link:active {
+    color: rgb(119, 40, 53);
+}
+
+/* ------------------------------------------ */
+
+/* IMAGE & BACKGROUNDS*/
+#imgBack {
+    background-image: url(pictures/monsteras.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    height: 600px;
+    object-fit: cover;
+}
+
+#aboutMe {
+    background-image: url(pictures/unsplashbg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    height: 600px;
+    object-fit: cover;
+}
+
+
+/* ------------------------------------------ */
+
+/* rest of page */
+#indexboxes2 {
+    /* position:absolute; */
+    /* content: ""; */
+    color:antiquewhite;
+    /* text-anchor: middle; */
+    position:absolute;
+    content: "";
+    display: table;
+    font-size: 30px;
+    clear: both;
+    width: 100%;
+    float: left;
+}
+
+#block1 {
+    background-color:rgb(0, 0, 0);
+    height: 50px;
+    padding-top: 10px;
+    width: 100%;
+
+    /* border-top: 20px solid black;
+    font-size: 15px; */
+    color:black;
+    /* background-color: black;
+    opacity:80%;
+    height: 10px;
+    padding-top: 10px;
+    width: 100%; */ 
+}
+
+#block3 {
+    background-color: #2a363b;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    
+    height: auto;
+    position: relative;
+    font-family: monospace, serif;
+}
+
+#skillsBlock {
+    background-color: #2a363b;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 1000px;
+    /* width: 100%;
+    height: 900px; */
+    font-family: monospace, serif;
+}
+/* inside block 3 */
+#landingOne {
+    width: 55%;
+    float:right;
+    height: 100%;
+    padding-bottom: 100px;
+}
+
+a.resume {
+    text-align: center;
+}
+
+
+#aboutMeTxt {
+    width: 55%;
+    float:right;
+    height: 1200px;
+    padding-bottom: 100px;
+}
+#qg {
+    text-decoration: #99B898 underline dashed;
+}
+#landingTwo {
+    background-color: #1b2225;
+    width: 45%;
+    height: 500px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+#aboutMePic {
+    background-color: #1b2225;
+    width: 45%;
+    height: 1200px;
+    padding-bottom: 100px;
+    float: left;
+    padding-top: 20px;
+}
+
+#skillsList {
+    font-size: 20px;
+    text-align: left;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom:150px;
+}
+
+
+.projimg {
+    padding-top: 30px;
+    max-width: 100%;
+    height: auto;
+}
+
+#block2  {
+    background-color: black;
+    float: left;
+    height: 50px;
+    text-decoration:none;
+    font-size: 15px;
+    width: 100%;
+    color:antiquewhite; 
+    padding-top: 10px;
+    position: fixed;
+    bottom:0;
+    padding-left: 20px;
+}
+
+.contact {
+    float: left;
+    height: 50px;
+    border:0;
+    text-decoration:none;
+    width: 20%;
+    color:antiquewhite;
+}
+
+#changeStyle {
+    height: 25px;
+    width: 150px;
+}
+
+a:link, a:visited {
+    color:antiquewhite
+}
+
+a:active {
+    color:cadetblue
+}
+
+#projects {
+    background-color: #2a363b;
+    font-size: 20px;
+    padding-top: 20px;
+    text-align: center;
+    width: 100%;
+    height: 1800px;
+    position: relative;
+    font-family: monospace, serif;
+}
+
+#projecttext {
+    color:antiquewhite;
+    font-size: 20px;
+    width: 50%;
+    float:right;
+    height: 100%;
+    padding-right: 20px;
+    padding-bottom: 100px;
+}
+#projectimgs {
+    float:left;
+    padding-left: 20px;
+    max-width: 400px;
+}
+
+#services {
+    color:antiquewhite;
+    background-color: #2a363b;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    height: 1000px;
+    float:center;
+    font-family: monospace, serif;
+}
+
+.servicebullets {
+    color:antiquewhite;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: left;
+    float:center;
+}

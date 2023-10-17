@@ -1,0 +1,294 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    background: rgb(201, 235, 109);
+    /* background-image: url(pictures/brightleaf.jpg);
+    background-size: cover;
+    background-position: center; */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/* HEADER */
+.header {
+    background-color: lightgoldenrodyellow;
+    text-shadow: 2px 2px 5px brown;
+    opacity: 60%;
+    text-align: center;
+    width:100%;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    margin: 0;
+    height: 80px;
+    border-bottom: 3px solid black;
+  }
+
+.header a.title {
+    text-align: center;
+    font-weight: 400;
+    color:black;
+    font-size: 50px;
+    /* font-family: Segoe UI, Futura, Arial, sans-serif; */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.header a.title:hover {
+    opacity: 1;
+    color: darkslateblue;
+}
+
+p {
+    line-height: 1.75;
+}
+
+/* LINKS */
+#boxes {
+    position:absolute;
+    content: "";
+    display: table;
+    opacity: 60%;
+    font-size: 30px;
+    clear: both;
+    width: 100%;
+    text-align: center;
+    text-anchor: middle;
+}
+
+.link {
+    float: left;
+    height: 30px;
+    margin:0;
+    border:0;
+    text-decoration:none;
+    line-height: 30px;
+    font-size: 20px;
+    width: 49.795%;
+    color:black;
+    padding-top: 10px;
+    background-color: lightgoldenrodyellow;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
+}
+
+#linkslol:hover {
+    font-size: 45;
+}
+
+a.link:hover, a.link:active {
+    background-color: rgb(201, 235, 109);
+    font-size: 45;
+}
+
+/* ------------------------------------------ */
+
+/* IMAGE & BACKGROUNDS*/
+#imgBack {
+    background-image: url(pictures/brightleaf.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    height: 220px;
+    object-fit: cover; 
+    /* background-color: bisque; */
+}
+
+#aboutMe {
+    background-image: url(pictures/brightleaf.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    height: 600px;
+    object-fit: cover;
+}
+
+
+/* ------------------------------------------ */
+
+/* rest of page */
+#indexboxes2 {
+    /* position:absolute; */
+    /* content: ""; */
+    color:black;
+    /* text-anchor: middle; */
+    position:absolute;
+    content: "";
+    display: table;
+    font-size: 30px;
+    clear: both;
+    width: 100%;
+    float: left;
+}
+
+#block1 {
+    border-top: 20px solid black;
+    font-size: 15px;
+    color:antiquewhite;
+    background-color: black;
+    opacity:80%;
+    height: 10px;
+    padding-top: 10px;
+    width: 100%;
+}
+
+#block3 {
+    background-color: rgb(201, 235, 109);
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    
+    height: auto;
+    position: relative;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#skillsBlock {
+    background-color: rgb(201, 235, 109);
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 900px;
+    /* width: 100%;
+    height: 900px; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* inside block 3 */
+#landingOne {
+    background-color:rgb(201, 235, 109);
+    width: 40%;
+    float:right;
+    height: 100%;
+    padding-bottom: 100px;
+}
+
+a.resume {
+    text-align: center;
+}
+
+
+#aboutMeTxt {
+    width: 55%;
+    float:right;
+    height: 1200px;
+    padding-bottom: 100px;
+}
+#quote {
+    background-color: rgb(253,254,144);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#qg {
+    text-decoration: lightgoldenrodyellow underline dashed;
+}
+#landingTwo {
+    background-color: rgb(253,254,144);
+    width: 60%;
+    height: 500px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+#aboutMePic {
+    background-color: rgb(253,254,144);
+    width: 45%;
+    height: 1200px;
+    padding-bottom: 100px;
+    float: left;
+    padding-top: 20px;
+}
+
+#skillsList {
+    font-size: 20px;
+    text-align: left;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 100px;
+}
+
+
+.projimg {
+    padding-top: 30px;
+    max-width: 100%;
+    height: auto;
+}
+
+#block2  {
+    background-color: darkslategray;
+    border-top: 2px solid black;
+    opacity: 85%;
+    float: left;
+    height: 50px;
+    text-decoration:none;
+    font-size: 15px;
+    width: 100%;
+    color:antiquewhite; 
+    padding-top: 10px;
+    position: fixed;
+    bottom:0;
+    padding-left: 20px;
+}
+
+.contact {
+    float: left;
+    height: 50px;
+    border:0;
+    text-decoration:none;
+    width: 20%;
+    color:black;
+}
+
+#changeStyle {
+    height: 25px;
+    width: 150px;
+}
+
+a:link, a:visited {
+    color:black
+}
+
+
+a:active {
+    color:blueviolet
+}
+
+#projects {
+    background-color: rgb(201, 235, 109);
+    font-size: 30px;
+    padding-top: 23px;
+    text-align: center;
+    width: 100%;
+    height: 1500px;
+    position: relative;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#projecttext {
+    color:black;
+    font-size: 23px;
+    width: 50%;
+    float:right;
+    height: 100%;
+    padding-right: 20px;
+    padding-bottom: 100px;
+}
+#projectimgs {
+    float:left;
+    padding-left: 20px;
+    max-width: 400px;
+}
+
+#services {
+    color:black;
+    background-color: rgb(201, 235, 109);
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    height: 700px;
+    float:center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.servicebullets {
+    color:black;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: left;
+    float:center;
+}
