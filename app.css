@@ -167,7 +167,7 @@ a.link:hover, a.link:active {
     background-position: center;
     background-size: 100% auto;
     height: 7vw;
-    width:100%;
+    width: 100%;
     object-fit: cover;
 }
 
