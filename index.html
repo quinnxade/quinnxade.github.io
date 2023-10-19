@@ -10,39 +10,27 @@
 <body>
     <div class="sidebar">
         <div class="profile-info">
-            <img src="your-profile-image.jpg" alt="Your Profile Image">
-            <h2 class="profile-name">Your Name</h2>
-            <p class="profile-title">Web Designer & Blogger</p>
+            <img src="pictures/mesmilingedit.JPG" alt="Your Profile Image">
+            <h2 class="profile-name">Quinn Gleadell</h2>
+            <p class="profile-title">TAMU '25 Student seeking internship</p>
         </div>
         <ul class="menu-list">
-            <li class="menu-item"><a href="index.html">Home</a></li>
-            <li class="menu-item"><a href="AboutMe.html">About Me</a></li>
+            <li class="menu-item"><a href="index.html"> Home</a></li>
+            <li class="menu-item"><a href="AboutMe.html"> About Me</a></li>
             <li class="menu-item"><a href="portfolio.html">Portfolio</a></li>
             <li class="menu-item"><a href="qualifications.html">Qualifications</a></li>
             <li class="menu-item"><a href="service.html">Service</a></li>
             <li class="menu-item"><a href="gpt_page.htm">ChatGPT generated page</a></li>
         </ul>
     </div>
+    <div id="imgBack"></div>
+    <div id="block1"></div>
     <div class="content">
         <!-- Image background + header + links -->
-        <div id="imgBack">
-            <!-- <div class="header">
-                <a href="#default" class="title">Howdy, I'm Quinn!</a>
-            </div> -->
-            <!-- <main id="boxes">
-                <a class="link" id="linkslol" href="index.html">Home</a>
-                <a class="link" id="linkslol" href="AboutMe.html">About Me</a>
-                <a class="link" id="linkslol" href="portfolio.html">Portfolio</a>
-                <a class="link" id="linkslol" href="qualifications.html">Qualifications</a>
-                <a class="link" id="linkslol" href="service.html">Service</a>
-                <a class="link" id="linkslol" href="gpt_page.html">Chat GPT page</a>
-            </main> -->
-        </div>
+        
         <!-- other area -->
         <div>
             <main id="indexboxez">
-                <div id="block1">
-                </div>
                 <block id="block3">
                     <h2 id="qg">Quinn Gleadell</h2>
                     <h3>Texas A&M Class of 2025</h3>
@@ -68,8 +56,33 @@
         </div>
     </div>
     <div id="block2">
+        <div class="contact">
+            <div id = "toggleSidebar" class="bcontainer" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <script>
+                function myFunction(x) {
+                x.classList.toggle("change");
+                }
+            </script>
+            <script>
+                // Get references to the sidebar and the toggle button
+                const sidebar = document.querySelector('.sidebar');
+                const toggleButton = document.getElementById('toggleSidebar');
+                const body = document.body;
+            
+                // Function to toggle the sidebar
+                function toggleSidebar() {
+                    body.classList.toggle('sidebar-open');
+                }
+            
+                // Add a click event listener to the toggle button
+                toggleButton.addEventListener('click', toggleSidebar);
+            </script> 
+        </div>
         <div class="contact">qs.gleadell@tamu.edu</div>
-        <div class="contact">sophiemg.1222@gmail.com</div>
         <div class="contact"><a href="https://www.linkedin.com/in/sophie-gleadell-13990120b/" target="_blank">LinkedIn</a></div>
         <div class="contact"><a href="https://github.com/qsgleadell" target="_blank">GitHub</a></div>
         <div class="contact"><button type="button" id="changeStyle" onclick="toggleStyleSheet()">Change Style</button></div>
