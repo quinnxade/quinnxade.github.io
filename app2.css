@@ -1,40 +1,139 @@
 body, html {
     padding: 0;
     margin: 0;
-    background: rgb(201, 235, 109);
-    /* background-image: url(pictures/brightleaf.jpg);
-    background-size: cover;
-    background-position: center; */
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    background-color:#ffffff;
+    font-family: monospace, serif;
 }
 
+/* Sidebar Styles */
+.sidebar {
+    /* background-color: #a0927f; */
+    background-color:#f58e5b;
+    color: black;
+    width: 280px; /* Adjust the width as needed */
+    position: absolute;
+    top: 10;
+    left: 0;
+    height: 100vw;
+    padding: 20px;
+}
+
+.profile-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-info img {
+    width: 100px; /* Adjust the image size */
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    display: block;
+}
+
+.profile-name {
+    font-size: 24px;
+    margin: 0;
+}
+
+.profile-title {
+    font-size: 14px;
+    margin: 0;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-item {
+    margin-bottom: 10px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #FF5733;
+    font-size: 19px;
+    transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.menu-item a:hover {
+    color: #FF5733; /* Change text color on hover */
+    background-color: #1C4A44; /* Slight background color change on hover */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow on hover */
+    font-size:22px;
+}
+
+/* Content Styles */
+.content {
+    margin-left: 320px; /* Adjust the margin to match sidebar width */
+    /* padding-left: 20px; */
+}
+/* Push the content to the right when the sidebar is open */
+body.sidebar-open .content {
+    margin-left: 0px; /* Adjust the margin to match your sidebar width */
+}
+
+.sidebar {
+    /* Your existing sidebar styles */
+    transform: translateX(0);
+    transition: transform 0.5s;
+}
+
+/* Hide the sidebar by translating it out of the viewport */
+body.sidebar-open .sidebar {
+    transform: translateX(-100%);
+}
+
+.bcontainer {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #FF5733;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
 
 /* HEADER */
 .header {
-    background-color: lightgoldenrodyellow;
-    text-shadow: 2px 2px 5px brown;
-    opacity: 60%;
+    background-color: #1b2225;
+    opacity: 80%;
     text-align: center;
     width:100%;
     padding-top: 10px;
     padding-bottom: 0px;
     margin: 0;
     height: 80px;
-    border-bottom: 3px solid black;
   }
 
 .header a.title {
     text-align: center;
     font-weight: 400;
-    color:black;
+    color:antiquewhite;
+    text-decoration: #99B898 underline dashed;
     font-size: 50px;
     /* font-family: Segoe UI, Futura, Arial, sans-serif; */
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: monospace, serif;
 }
 
 .header a.title:hover {
     opacity: 1;
-    color: darkslateblue;
+    color:rgb(119, 40, 53);
 }
 
 p {
@@ -42,58 +141,40 @@ p {
 }
 
 /* LINKS */
-#boxes {
-    position:absolute;
-    content: "";
-    display: table;
-    opacity: 60%;
-    font-size: 30px;
-    clear: both;
-    width: 100%;
-    text-align: center;
-    text-anchor: middle;
-}
 
 .link {
     float: left;
-    height: 30px;
+    /* height: 40px; */
     margin:0;
     border:0;
     text-decoration:none;
-    line-height: 30px;
-    font-size: 20px;
-    width: 49.795%;
-    color:black;
+    /* font-size: 30px; */
+    width: 16.666%;
+    color: black;;
     padding-top: 10px;
-    background-color: lightgoldenrodyellow;
-    border-bottom: 3px solid black;
-    border-right: 3px solid black;
+    background-color: #000000;
 }
 
-#linkslol:hover {
-    font-size: 45;
-}
 
 a.link:hover, a.link:active {
-    background-color: rgb(201, 235, 109);
-    font-size: 45;
+    color: #FF5733;
 }
 
 /* ------------------------------------------ */
 
 /* IMAGE & BACKGROUNDS*/
 #imgBack {
-    background-image: url(pictures/brightleaf.jpg);
+    background-image: url(pictures/oranges.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% auto;
-    height: 220px;
-    object-fit: cover; 
-    /* background-color: bisque; */
+    height: 8vw;
+    width: 100%;
+    object-fit: cover;
 }
 
 #aboutMe {
-    background-image: url(pictures/brightleaf.jpg);
+    background-image: url(pictures/unsplashbg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% auto;
@@ -108,7 +189,7 @@ a.link:hover, a.link:active {
 #indexboxes2 {
     /* position:absolute; */
     /* content: ""; */
-    color:black;
+    color: black;;
     /* text-anchor: middle; */
     position:absolute;
     content: "";
@@ -118,42 +199,128 @@ a.link:hover, a.link:active {
     width: 100%;
     float: left;
 }
+#indexboxez {
+    /* position:absolute; */
+    /* content: ""; */
+    /* color:antiquewhite; */
+    /* text-anchor: middle; */
+    content: "";
+    display: table;
+    font-size: 30px;
+    clear: both;
+    width: 100%;
+    float: left;
+    height:1000px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.blog-post {
+    background-color: #E0E5E5; /* Light blue/green background */
+    border: 2px solid #1C4A44; /* Forest green border color */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px;
+    transition: transform 0.3s;
+}
+
+.blog-post:hover {
+    transform: scale(1.05);
+}
+
+.post-title {
+    font-size: 24px;
+    margin: 0;
+    color: #3C6E71; /* Dark green/blue title color */
+    text-shadow: 1px 1px 1px #000;
+    transition: color 0.3s;
+}
+
+.post-title:hover {
+    color: #1C4A44; /* Darker forest green on hover */
+}
+
+.post-meta {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #7A9A96; /* Softer green/blue for meta */
+}
+
+.post-meta:hover {
+    color: #2C564E; /* Darker green/blue on hover */
+}
+
+.post-content {
+    font-size: 16px;
+}
+
+.read-more {
+    display: inline-block;
+    background-color: #1C4A44; /* Forest green button background color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid #1C4A44;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.read-more:hover {
+    background-color: #132E2A; /* Darker forest green on hover */
+}
 
 #block1 {
-    border-top: 20px solid black;
-    font-size: 15px;
-    color:antiquewhite;
-    background-color: black;
+    background: darkslategray;
+    height: 20px;
+    padding-top: 10px;
+    width: 100%;
+
+    /* border-top: 20px solid black;
+    font-size: 15px; */
+    color:black;
+    /* background-color: black;
     opacity:80%;
     height: 10px;
     padding-top: 10px;
-    width: 100%;
+    width: 100%; */ 
 }
 
 #block3 {
-    background-color: rgb(201, 235, 109);
+    background-color: #2a363b;
+    background: #2a363b;
+    color: black;;
     font-size: 20px;
     text-align: center;
     width: 100%;
-    
-    height: auto;
-    position: relative;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* height: auto; */
+    /* position: relative; */
+    font-family: monospace, serif;
+}
+
+#restofpage {
+    width:100%;
 }
 
 #skillsBlock {
-    background-color: rgb(201, 235, 109);
+    background-color: #2a363b;
     font-size: 20px;
     text-align: center;
-    padding-bottom: 900px;
+    padding-bottom: 1000px;
     /* width: 100%;
     height: 900px; */
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: monospace, serif;
 }
 /* inside block 3 */
 #landingOne {
-    background-color:rgb(201, 235, 109);
-    width: 40%;
+    width: 55%;
     float:right;
     height: 100%;
     padding-bottom: 100px;
@@ -170,23 +337,18 @@ a.resume {
     height: 1200px;
     padding-bottom: 100px;
 }
-#quote {
-    background-color: rgb(253,254,144);
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
 #qg {
-    text-decoration: lightgoldenrodyellow underline dashed;
+    text-decoration: #99B898 underline dashed;
 }
 #landingTwo {
-    background-color: rgb(253,254,144);
-    width: 60%;
+    background-color: #1b2225;
+    width: 45%;
     height: 500px;
     padding-top: 20px;
     padding-bottom: 100px;
 }
 #aboutMePic {
-    background-color: rgb(253,254,144);
+    background-color: #1b2225;
     width: 45%;
     height: 1200px;
     padding-bottom: 100px;
@@ -199,7 +361,7 @@ a.resume {
     text-align: left;
     padding-left: 20%;
     padding-right: 20%;
-    padding-bottom: 100px;
+    padding-bottom:150px;
 }
 
 
@@ -210,15 +372,13 @@ a.resume {
 }
 
 #block2  {
-    background-color: darkslategray;
-    border-top: 2px solid black;
-    opacity: 85%;
     float: left;
     height: 50px;
     text-decoration:none;
     font-size: 15px;
     width: 100%;
     color:antiquewhite; 
+    background: darkslategray;
     padding-top: 10px;
     position: fixed;
     bottom:0;
@@ -231,7 +391,7 @@ a.resume {
     border:0;
     text-decoration:none;
     width: 20%;
-    color:black;
+    color:#FF5733;
 }
 
 #changeStyle {
@@ -240,28 +400,27 @@ a.resume {
 }
 
 a:link, a:visited {
-    color:black
+    color:#ce3d27;
 }
 
-
 a:active {
-    color:blueviolet
+    color:cadetblue
 }
 
 #projects {
-    background-color: rgb(201, 235, 109);
-    font-size: 30px;
-    padding-top: 23px;
+    background-color: #2a363b;
+    font-size: 20px;
+    padding-top: 20px;
     text-align: center;
     width: 100%;
-    height: 1500px;
+    height: 1800px;
     position: relative;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: monospace, serif;
 }
 
 #projecttext {
-    color:black;
-    font-size: 23px;
+    color:antiquewhite;
+    font-size: 20px;
     width: 50%;
     float:right;
     height: 100%;
@@ -275,18 +434,18 @@ a:active {
 }
 
 #services {
-    color:black;
-    background-color: rgb(201, 235, 109);
+    color:antiquewhite;
+    background-color: #2a363b;
     font-size: 20px;
     text-align: center;
     width: 100%;
-    height: 700px;
+    height: 1000px;
     float:center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: monospace, serif;
 }
 
 .servicebullets {
-    color:black;
+    color:antiquewhite;
     margin-left: 20%;
     margin-right: 20%;
     text-align: left;
