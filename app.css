@@ -84,9 +84,22 @@ body.sidebar-open .sidebar {
     transform: translateX(-100%);
 }
 
-.bcontainer {
+#bcontainer {
+    display: inline-block;
+    /* cursor: pointer; */
+    background-position: center;
+    text-align:center;
+    color: black;
+    align-items: center;
+}
+
+.bcontainer2 {
     display: inline-block;
     cursor: pointer;
+    background-position: center;
+    text-align:center;
+    color: black;
+    align-items: center;
 }
 
 .bar1, .bar2, .bar3 {
@@ -211,55 +224,6 @@ a.link:hover, a.link:active {
     height:1000px;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.blog-post {
-    background-color: #E0E5E5; /* Light blue/green background */
-    border: 2px solid #1C4A44; /* Forest green border color */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    margin: 20px;
-
-    transition: transform 0.3s;
-}
-
-.blog-post:hover {
-    transform: scale(1.05);
-}
-
-.post-title {
-    font-size: 24px;
-    margin: 0;
-    color: #3C6E71; /* Dark green/blue title color */
-    text-shadow: 1px 1px 1px #000;
-    transition: color 0.3s;
-}
-
-.post-title:hover {
-    color: #1C4A44; /* Darker forest green on hover */
-}
-
-.post-meta {
-    font-size: 14px;
-    margin: 5px 0;
-    color: #7A9A96; /* Softer green/blue for meta */
-}
-
-.post-meta:hover {
-    color: #2C564E; /* Darker green/blue on hover */
-}
-
-.post-content {
-    font-size: 16px;
-}
-
 .read-more {
     display: inline-block;
     background-color: #1C4A44; /* Forest green button background color */
@@ -299,7 +263,8 @@ a.link:hover, a.link:active {
     font-size: 20px;
     text-align: center;
     width: 100%;
-    
+    align-items: center;
+    /* position:center; */
     height: 700vw;
     /* position: relative; */
     font-family: monospace, serif;
@@ -600,4 +565,60 @@ a:active {
 
 #labreport {
     font-size: 15px;
+}
+
+.cybersecurity-blog-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 75vw;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 20px;
+    align-items: center;
+    background-position: center;
+    
+}
+
+.cybersecurity-blog-card img {
+    width: 100%;
+    height: 12vw;
+    object-fit: cover;
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px; */
+}
+
+.cybersecurity-card-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.cybersecurity-card-content h2 {
+    font-size: 24px;
+    margin: 0;
+    color: #333;
+}
+
+.cybersecurity-card-content p {
+    font-size: 16px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.cybersecurity-card-content .cybersecurity-date {
+    font-size: 14px;
+    color: #777;
+}
+
+.cybersecurity-card-content a {
+    display: inline-block;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.cybersecurity-blog-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.2);
 }
