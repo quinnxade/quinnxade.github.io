@@ -294,6 +294,7 @@ a.link:hover, a.link:active {
 #block3 {
     background-color: #2a363b;
     background: #2a363b;
+    color: lightgray;
     font-size: 20px;
     text-align: center;
     width: 100%;
