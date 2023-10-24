@@ -213,6 +213,10 @@ a.link:hover, a.link:active {
     float: left;
     height:1000px;
 }
+#resourcehub {
+    color:black;
+    padding-left:2vw;
+}
 
 .container {
     display: flex;
