@@ -10,12 +10,13 @@ body, html {
 .sidebar {
     /* background-color: #a0927f; */
     background-color:#f58e5b;
+    opacity:90%;
     color: black;
     width: 280px; /* Adjust the width as needed */
     position: absolute;
     top: 10;
     left: 0;
-    height: 100vw;
+    height: 170vw;
     padding: 20px;
 }
 
