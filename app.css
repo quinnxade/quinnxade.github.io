@@ -8,9 +8,31 @@ body, html {
     background-size: 100% 100%;
 }
 
+.landingquote {
+    float:center;
+    align-items: center;
+    padding-left: 26vw;
+    padding-right: 26vw;
+}
+
+#lilplant1 {
+    height:3vw;
+    float: right;
+}
+#lilplant2 {
+    height:3vw;
+    float:left;
+}
+
 #segment1 {
-    background: 2a363b;
-    height: 5vw;
+    background: #2a363b;
+    height: 10vw;
+}
+
+#bongobongo {
+    float:right;
+    height:5vw;
+    padding-top:1vw;
 }
 
 .landing-card {
@@ -21,7 +43,7 @@ body, html {
     margin: 40px;
     text-align: center;
     transition: transform 0.5s ease-in-out; /* Smoother transition for hover effect */
- }
+}
  
  .landing-card h1 {
     font-size: 36px;
@@ -227,6 +249,16 @@ a.link:hover, a.link:active {
     background-position: center;
     background-size: 100% auto;
     height: 7vw;
+    width: 100%;
+    object-fit: cover;
+}
+
+#imgBack2 {
+    background-image: url(pictures/monsteras.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    height: 12vw;
     width: 100%;
     object-fit: cover;
 }
