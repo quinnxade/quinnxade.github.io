@@ -10,3 +10,16 @@ function animateFloatingCards() {
 }
 
 window.addEventListener('load', animateFloatingCards);
+
+const floatingImgs = document.querySelectorAll('.floating-img');
+
+function animateFloatingImgs() {
+    floatingImgs.forEach((img, index) => {
+        setTimeout(() => {
+            img.style.opacity = 1;
+            img.style.transform = 'translateY(0)';
+        }, 500 * index);
+    });
+}
+
+window.addEventListener('load', animateFloatingImgs);
