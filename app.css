@@ -1,15 +1,62 @@
 body, html {
     padding: 0;
     margin: 0;
-    background: #2a363b;
+    /* background: #2a363b; */
     font-family: monospace, serif;
+    background: linear-gradient(to bottom, #1b2b22, black);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+#segment1 {
+    background: 2a363b;
+    height: 5vw;
+}
+
+.landing-card {
+    background-color: #2a363b; /* Dark-ish green background */
+    border: 5px double white; /* Double border with dark green color */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px;
+    margin: 40px;
+    text-align: center;
+    transition: transform 0.5s ease-in-out; /* Smoother transition for hover effect */
+ }
+ 
+ .landing-card h1 {
+    font-size: 36px;
+ }
+ 
+ .landing-card p {
+    font-size: 18px;
+ }
+
+ .landing-card:hover {
+    transform: scale(1.05); /* Enlarge the card on hover */
+ }
+
+ /* Styles for the floating cards */
+.floating-cards {
+    display: flex;
+    justify-content: center;
+}
+
+.floating-card {
+    background-color: #2a363b; /* Dark-ish green background */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
 }
 
 /* Sidebar Styles */
 .sidebar {
     background-color: black; /* Dark background color */
     color: #fff;
-    width: 280px; /* Adjust the width as needed */
+    width: 15vw; /* Adjust the width as needed */
     position: absolute;
     top: 10;
     left: 0;
@@ -57,7 +104,7 @@ body, html {
 }
 
 .menu-item a:hover {
-    color: #FF5733; /* Change text color on hover */
+    color: white; /* Change text color on hover */
     background-color: #1C4A44; /* Slight background color change on hover */
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow on hover */
     font-size:18px;
@@ -65,7 +112,7 @@ body, html {
 
 /* Content Styles */
 .content {
-    margin-left: 320px; /* Adjust the margin to match sidebar width */
+    margin-left: 15vw; /* Adjust the margin to match sidebar width */
     /* padding-left: 20px; */
 }
 /* Push the content to the right when the sidebar is open */
