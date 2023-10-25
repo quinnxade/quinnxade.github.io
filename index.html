@@ -33,12 +33,22 @@
         <div>
             <main id="indexboxez">
                 <block id="block3">
-                    <h2 id="qg">Quinn Gleadell</h2>
-                    <h3>Texas A&M Class of 2025</h3>
+                    <div class="landing-card">
+                        <h1>Hi, I'm Quinn.</h1>
+                        <p>Welcome to my personal website.</p>
+                    </div>
+                    <br>
                     <div id="quote"><i>"Don&#8217t wait until you&#8217ve reached your goal to be proud of yourself. Be proud of every step you take towards reaching that goal"</i></div>
                     <br>
-                    <p>I'm a Junior Computing major with a concentration in Cybersecurity at Texas A&M University. My interests include Cybersecurity, Web Development, and Art. I strive to contribute to the growing diversity in the field of technology.</p>
-                    <p>Click the About Me tab to learn more about me</p>
+                    <hr>
+                    <div class="floating-cards">
+                        <div class="floating-card" id="card1">Card 1</div>
+                        <div class="floating-card" id="card2">Card 2</div>
+                        <div class="floating-card" id="card3">Card 3</div>
+                    </div>
+                    <div id="segment1">
+
+                    </div>
                 </block>
                 
             </main>
@@ -53,7 +63,7 @@
             </div>
             <script>
                 function myFunction(x) {
-                x.classList.toggle("change");
+                    x.classList.toggle("change");
                 }
             </script>
             <script>
@@ -69,7 +79,11 @@
             
                 // Add a click event listener to the toggle button
                 toggleButton.addEventListener('click', toggleSidebar);
-            </script> 
+            
+                // Add this code to open the sidebar initially
+                body.classList.add('sidebar-open');
+            </script>
+            
         </div>
         <div class="contact">qs.gleadell@tamu.edu</div>
         <div class="contact"><a href="https://www.linkedin.com/in/sophie-gleadell-13990120b/" target="_blank">LinkedIn</a></div>
@@ -77,5 +91,6 @@
         <div class="contact"><button type="button" id="changeStyle" onclick="toggleStyleSheet()">Change Style</button></div>
     </div>
     <script src="functions.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
