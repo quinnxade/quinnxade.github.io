@@ -5,7 +5,7 @@ body, html {
     background: linear-gradient(to bottom, #1b2b22, black);
     background-attachment: fixed;
     background-size: 100% 100%;
-    height:85vw;
+    height:100vw;
     width: 100%;
 }
 
@@ -688,17 +688,61 @@ a:active {
     font-size: 15px;
 }
 
+#blogblock {
+    background-color: #30362f;
+    margin:3vw;
+    border-radius: 5%;
+}
+
+#blogblock p {
+    color:#f9f9f9;
+    padding-left:2vw;
+    padding-right:2vw;
+}
+
+#backtoblog {
+    padding-left:5vw;
+}
+
+#blogblock img {
+    border-top-right-radius: 5%;
+    border-top-left-radius: 5%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    /* height: 12vw; */
+    width: 100%;
+    object-fit: cover;
+}
+
+#blogblock h1 {
+    color:#f9f9f9;
+    padding-left:2vw;
+    padding-right:2vw;
+}
+
+#blogpostimg {
+    background-image: url(pictures/comptiagetcert.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    height: 12vw;
+    width: 100%;
+    object-fit: cover;
+
+}
+
 .cybersecurity-blog-card {
-    background-color: #f9f9f9;
+    background-color: #30362f;
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     width: 75vw;
     transition: transform 0.3s, box-shadow 0.3s;
-    margin: 20px;
+    margin-right: 10vw;
+    margin-left: 10vw;
     align-items: center;
     background-position: center;
-    
 }
 
 .cybersecurity-blog-card img {
@@ -717,18 +761,18 @@ a:active {
 .cybersecurity-card-content h2 {
     font-size: 24px;
     margin: 0;
-    color: #333;
+    color: #ffffff;
 }
 
 .cybersecurity-card-content p {
     font-size: 16px;
-    color: #666;
+    color: #bdbdbd;
     margin: 10px 0;
 }
 
 .cybersecurity-card-content .cybersecurity-date {
     font-size: 14px;
-    color: #777;
+    color: #959595;
 }
 
 .cybersecurity-card-content a {
