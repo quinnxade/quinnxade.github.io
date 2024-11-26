@@ -1,0 +1,98 @@
+/* General Body Styles */
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Full-Screen Gradient Background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(90deg, #f5f5dc, #ffe4e1, #d5e5d3, #bde0fe, #e8d8c3, #f0efeb, #f5f5dc);
+  background-size: 700% 700%;
+  animation: bg-cycle 15s infinite;
+  z-index: -2;
+}
+
+/* Background animation */
+@keyframes bg-cycle {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* General Body Styles */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000000; /* Dark background for contrast */
+  font-family: Arial, sans-serif;
+}
+
+canvas {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vh; 
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Pattern Container */
+.pattern-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SVG Wavy Pattern */
+.wavy-pattern {
+  width: 80%;
+  height: 80%;
+}
+/* Menu Bar Styles */
+nav {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+}
+
+nav ul li {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  padding: 10px 20px;
+  background-color: rgba(240, 239, 235, 0.7);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li:hover {
+  transform: translateY(-5px);
+  background-color: rgba(240, 239, 235, 0.9);
+}
