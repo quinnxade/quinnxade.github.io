@@ -50,20 +50,6 @@ canvas {
 }
 
 
-/* Pattern Container */
-.pattern-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* SVG Wavy Pattern */
-.wavy-pattern {
-  width: 80%;
-  height: 80%;
-}
 /* Menu Bar Styles */
 nav {
   position: absolute;
@@ -96,3 +82,154 @@ nav ul li:hover {
   transform: translateY(-5px);
   background-color: rgba(240, 239, 235, 0.9);
 }
+
+.border {
+  position: relative;
+  width: 50vw; /* Desired box width */
+  height: 30vh; /* Desired box height */
+  margin: auto;
+  padding: 20px; /* Add padding to create space around the borders */
+  box-sizing: content-box; /* Ensure padding doesn't affect the size */
+  /* Flexbox for centering */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+/* Top Border */
+.squiggle-border-top {
+  position: absolute;
+  top: 0;
+  left: 5vw; 
+  right: 5vw; 
+  height: 50px; 
+  background: url('../pictures/colorline.png') repeat-x;
+  /* filter: invert(1); */
+  background-size: 50px;
+  animation: border-animate-top 6s linear infinite;
+}
+
+/* Bottom Border */
+.squiggle-border-bot {
+  position: absolute;
+  bottom: 0;
+  left: 5vw; 
+  right: 5vw; 
+  height: 50px; 
+  background: url('../pictures/colorline.png') repeat-x;
+  /* filter: invert(1); */
+  background-size: 50px;
+  animation: border-animate-bot 6s linear infinite;
+}
+
+/* Left Border */
+.squiggle-border-left {
+  position: absolute;
+  top: 5vw; /* Offset to add spacing from the top */
+  bottom: 5vw; /* Offset to add spacing from the bottom */
+  left: 0;
+  width: 50px; /* Adjust to match the squiggle image width */
+  background: url('../pictures/colorline_vert.png') repeat-y;
+  /* filter: invert(1); */
+  background-size: 50px 50px;
+  animation: border-animate-left 6s linear infinite;
+}
+
+/* Right Border */
+.squiggle-border-right {
+  position: absolute;
+  top: 4vw; /* Offset to add spacing from the top */
+  bottom: 4vw; /* Offset to add spacing from the bottom */
+  right: 0;
+  width: 50px; /* Adjust to match the squiggle image width */
+  background: url('../pictures/colorline_vert.png') repeat-y;
+  /* filter: invert(1); */
+  background-size: 50px 50px;
+  animation: border-animate-right 8s linear infinite;
+}
+
+/* Default h1 Style */
+.border h1 {
+  color: #fff; /* Default text color */
+  text-shadow: none; /* No glow by default */
+  transform: scale(1); /* Default size */
+  transition: transform 0.3s ease, text-shadow 0.3s ease, color 0.3s ease; /* Smooth scaling and glow transition */
+}
+
+/* Glow effect and size increase on hover */
+.border:hover h1 {
+  color: white; /* Off-white text color */
+  transform: scale(1.2); /* Slightly larger size */
+  animation: glow 1.5s infinite alternate; /* Pulsating glow animation */
+}
+
+/* Glow Animation */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #f5f5dc, 0 0 10px #f5f5dc, 0 0 20px #e8d8c3; /* White/Beige glow */
+  }
+  50% {
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #f5f5dc, 0 0 30px #e8d8c3; /* Stronger white/Beige glow */
+  }
+  100% {
+    text-shadow: 0 0 5px #f5f5dc, 0 0 10px #e8d8c3, 0 0 20px #e8d8c3; /* Fading white/Beige glow */
+  }
+}
+
+
+/* Animation for the Squiggle */
+@keyframes border-animate-top {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -100px 0;
+  }
+}
+
+@keyframes border-animate-bot {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100px 0;
+  }
+}
+
+/* Animation for the Squiggle */
+@keyframes border-animate-left {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 100px;
+  }
+}
+
+/* Animation for the Squiggle */
+@keyframes border-animate-right {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -100px;
+  }
+}
+
+/* Initial animation speed */
+.squiggle-border-top,
+.squiggle-border-bot,
+.squiggle-border-left,
+.squiggle-border-right {
+  animation-duration: 8s; /* Default animation speed */
+  transition: animation-duration 0.3s ease; /* Smooth transition for speed change */
+}
+
+/* Speed up animation on hover */
+.border:hover .squiggle-border-top,
+.border:hover .squiggle-border-bot,
+.border:hover .squiggle-border-left,
+.border:hover .squiggle-border-right {
+  animation-duration: 2s; /* Faster animation on hover */
+}
+
