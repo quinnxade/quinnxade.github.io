@@ -1,235 +1,173 @@
-/* General Body Styles */
-body {
+* {
   margin: 0;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-/* Full-Screen Gradient Background */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(90deg, #f5f5dc, #ffe4e1, #d5e5d3, #bde0fe, #e8d8c3, #f0efeb, #f5f5dc);
-  background-size: 700% 700%;
-  animation: bg-cycle 15s infinite;
-  z-index: -2;
-}
-
-/* Background animation */
-@keyframes bg-cycle {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
-}
-
-/* General Body Styles */
 body {
+  font-family: 'Arial', sans-serif;
+  background-color: #000; /* Black background */
+  overflow-x: hidden;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+  background: rgba(0, 0, 0, 0.8); /* Transparent black */
+  color: #bde0fe; /* Pastel blue text */
+  float: left;
+  padding: 20px;
+  max-width: 250px;
+  border: 2px solid #d5e5d3; /* Light green border */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  margin: 20px auto; /* Centered horizontally */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #d5e5d3; /* Soft pastel green */
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
   margin: 0;
+}
+
+.sidebar-links li {
+  margin: 10px 0;
+}
+
+.sidebar-links a {
+  text-decoration: none;
+  color: #bde0fe;
+  font-size: 1.2rem;
+  display: block;
+  padding: 10px;
+  border: 2px solid transparent; /* Border for hover effect */
+  transition: all 0.3s ease;
+}
+
+.sidebar-links a:hover {
+  border-color: #d5e5d3; /* Green border on hover */
+  background: rgba(255, 255, 255, 0.1); /* Slightly visible background */
+  border-radius: 5px;
+}
+
+/* Responsive Sidebar (Collapsible on Mobile) */
+@media (max-width: 768px) {
+  .sidebar {
+    max-width: 90%; /* Adjust to fit smaller screens */
+    padding: 15px;
+  }
+
+  .sidebar-links a {
+    font-size: 1rem; /* Adjust font size for smaller devices */
+  }
+}
+
+/* Split Section */
+.split-section {
+  display: flex;
   height: 100vh;
+}
+
+/* Left Side: Black with Central Circle */
+.split-left {
+  flex: 1;
+  background-color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #000000; /* Dark background for contrast */
-  font-family: Arial, sans-serif;
 }
 
-canvas {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw; 
-  height: 100vh; 
-  margin: 0;
-  padding: 0;
+.logo-circle {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, #bde0fe, #a0db98); /* Gradient inside the circle */
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-
-/* Menu Bar Styles */
-nav {
-  position: absolute;
-  top: 20px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  z-index: 2;
-}
-
-nav ul {
-  list-style-type: none;
-  display: flex;
-  gap: 30px;
-  padding: 0;
-}
-
-nav ul li {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
-  padding: 10px 20px;
-  background-color: rgba(240, 239, 235, 0.7);
-  border-radius: 15px;
-  cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-nav ul li:hover {
-  transform: translateY(-5px);
-  background-color: rgba(240, 239, 235, 0.9);
-}
-
-.border {
+/* Right Side: Gradient Background with Floating Shapes */
+.split-right {
+  flex: 1;
+  background: linear-gradient(135deg, #a0db98, #bde0fe);
   position: relative;
-  width: 50vw; /* Desired box width */
-  height: 30vh; /* Desired box height */
-  margin: auto;
-  padding: 20px; /* Add padding to create space around the borders */
-  box-sizing: content-box; /* Ensure padding doesn't affect the size */
-  /* Flexbox for centering */
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  overflow: hidden;
 }
 
-/* Top Border */
-.squiggle-border-top {
+.floating-shape {
   position: absolute;
-  top: 0;
-  left: 5vw; 
-  right: 5vw; 
-  height: 50px; 
-  background: url('../pictures/colorline.png') repeat-x;
-  /* filter: invert(1); */
-  background-size: 50px;
-  animation: border-animate-top 6s linear infinite;
+  border-radius: 50%;
+  filter: blur(15px);
 }
 
-/* Bottom Border */
-.squiggle-border-bot {
+.floating-shape:nth-child(1) {
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1); /* Light transparent white */
+  top: 10%;
+  left: 15%;
+}
+
+.floating-shape:nth-child(2) {
+  width: 400px;
+  height: 400px;
+  background: rgba(189, 224, 254, 0.2); /* Light pastel blue */
+  bottom: 20%;
+  right: 10%;
+}
+
+.floating-shape:nth-child(3) {
+  width: 200px;
+  height: 200px;
+  background: rgba(213, 229, 211, 0.2); /* Light pastel green */
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Content Box */
+.content-box {
   position: absolute;
-  bottom: 0;
-  left: 5vw; 
-  right: 5vw; 
-  height: 50px; 
-  background: url('../pictures/colorline.png') repeat-x;
-  /* filter: invert(1); */
-  background-size: 50px;
-  animation: border-animate-bot 6s linear infinite;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6); /* Transparent black */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  color: white;
+  text-align: center;
+  z-index: 1;
 }
 
-/* Left Border */
-.squiggle-border-left {
-  position: absolute;
-  top: 5vw; /* Offset to add spacing from the top */
-  bottom: 5vw; /* Offset to add spacing from the bottom */
-  left: 0;
-  width: 50px; /* Adjust to match the squiggle image width */
-  background: url('../pictures/colorline_vert.png') repeat-y;
-  /* filter: invert(1); */
-  background-size: 50px 50px;
-  animation: border-animate-left 6s linear infinite;
+.content-box h1 {
+  margin-bottom: 15px;
+  font-size: 2rem;
 }
 
-/* Right Border */
-.squiggle-border-right {
-  position: absolute;
-  top: 4vw; /* Offset to add spacing from the top */
-  bottom: 4vw; /* Offset to add spacing from the bottom */
-  right: 0;
-  width: 50px; /* Adjust to match the squiggle image width */
-  background: url('../pictures/colorline_vert.png') repeat-y;
-  /* filter: invert(1); */
-  background-size: 50px 50px;
-  animation: border-animate-right 8s linear infinite;
+.content-box p {
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
-/* Default h1 Style */
-.border h1 {
-  color: #fff; /* Default text color */
-  text-shadow: none; /* No glow by default */
-  transform: scale(1); /* Default size */
-  transition: transform 0.3s ease, text-shadow 0.3s ease, color 0.3s ease; /* Smooth scaling and glow transition */
+/* Footer */
+footer {
+  background: #000;
+  color: #bde0fe;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
 }
 
-/* Glow effect and size increase on hover */
-.border:hover h1 {
-  color: white; /* Off-white text color */
-  transform: scale(1.2); /* Slightly larger size */
-  animation: glow 1.5s infinite alternate; /* Pulsating glow animation */
+footer a {
+  color: #d5e5d3;
+  text-decoration: none;
 }
 
-/* Glow Animation */
-@keyframes glow {
-  0% {
-    text-shadow: 0 0 5px #f5f5dc, 0 0 10px #f5f5dc, 0 0 20px #e8d8c3; /* White/Beige glow */
-  }
-  50% {
-    text-shadow: 0 0 10px #ffffff, 0 0 20px #f5f5dc, 0 0 30px #e8d8c3; /* Stronger white/Beige glow */
-  }
-  100% {
-    text-shadow: 0 0 5px #f5f5dc, 0 0 10px #e8d8c3, 0 0 20px #e8d8c3; /* Fading white/Beige glow */
-  }
+footer a:hover {
+  text-decoration: underline;
 }
-
-
-/* Animation for the Squiggle */
-@keyframes border-animate-top {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -100px 0;
-  }
-}
-
-@keyframes border-animate-bot {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 100px 0;
-  }
-}
-
-/* Animation for the Squiggle */
-@keyframes border-animate-left {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 0 100px;
-  }
-}
-
-/* Animation for the Squiggle */
-@keyframes border-animate-right {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 0 -100px;
-  }
-}
-
-/* Initial animation speed */
-.squiggle-border-top,
-.squiggle-border-bot,
-.squiggle-border-left,
-.squiggle-border-right {
-  animation-duration: 8s; /* Default animation speed */
-  transition: animation-duration 0.3s ease; /* Smooth transition for speed change */
-}
-
-/* Speed up animation on hover */
-.border:hover .squiggle-border-top,
-.border:hover .squiggle-border-bot,
-.border:hover .squiggle-border-left,
-.border:hover .squiggle-border-right {
-  animation-duration: 2s; /* Faster animation on hover */
-}
-
