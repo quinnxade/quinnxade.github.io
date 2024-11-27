@@ -5,72 +5,118 @@
 }
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #000; /* Black background */
+  background-color: #000;
   overflow-x: hidden;
 }
 
-/* Sidebar Navigation */
-.sidebar {
-  background: rgba(0, 0, 0, 0.8); /* Transparent black */
-  color: #bde0fe; /* Pastel blue text */
-  float: left;
-  padding: 20px;
-  max-width: 250px;
-  border: 2px solid #d5e5d3; /* Light green border */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
-  margin: 20px auto; /* Centered horizontally */
-  border-radius: 10px; /* Rounded corners */
+.typewrite {
+  color: white;
+  text-decoration: none;
 }
 
-.sidebar h2 {
-  font-size: 1.5rem;
-  text-align: center;
-  margin-bottom: 20px;
+/* Subtle Navigation Bar */
+.nav-bar {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.4); /* Subtle translucent background */
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar {
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%); /* Visible position */
+}
+
+.sidebar.hidden {
+  transform: translateX(0); /* Hidden off-screen */
+}
+
+
+
+#bcontainer {
+  display: inline-block;
+  /* cursor: pointer; */
+  background-position: center;
+  text-align:center;
+  color: black;
+  align-items: center;
+}
+
+.bcontainer2 {
+  display: inline-block;
+  cursor: pointer;
+  background-position: center;
+  text-align:center;
+  color: black;
+  align-items: center;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column; /* Stack links vertically */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 5px 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #bde0fe; /* Soft pastel blue */
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.2); /* Subtle hover effect */
   color: #d5e5d3; /* Soft pastel green */
 }
 
-.sidebar-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.sidebar-links li {
-  margin: 10px 0;
-}
-
-.sidebar-links a {
-  text-decoration: none;
-  color: #bde0fe;
-  font-size: 1.2rem;
-  display: block;
-  padding: 10px;
-  border: 2px solid transparent; /* Border for hover effect */
-  transition: all 0.3s ease;
-}
-
-.sidebar-links a:hover {
-  border-color: #d5e5d3; /* Green border on hover */
-  background: rgba(255, 255, 255, 0.1); /* Slightly visible background */
-  border-radius: 5px;
-}
-
-/* Responsive Sidebar (Collapsible on Mobile) */
+/* Responsive Design for Mobile */
 @media (max-width: 768px) {
-  .sidebar {
-    max-width: 90%; /* Adjust to fit smaller screens */
-    padding: 15px;
+  .nav-bar {
+    top: 5px;
+    left: 5px;
+    padding: 5px 15px;
   }
 
-  .sidebar-links a {
-    font-size: 1rem; /* Adjust font size for smaller devices */
+  .nav-links a {
+    font-size: 0.9rem;
+    padding: 5px 8px;
   }
 }
 
 /* Split Section */
 .split-section {
   display: flex;
-  height: 100vh;
+  height: 50vh;
 }
 
 /* Left Side: Black with Central Circle */
@@ -90,12 +136,26 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Right Side: Gradient Background with Floating Shapes */
 .split-right {
   flex: 1;
-  background: linear-gradient(135deg, #a0db98, #bde0fe);
-  position: relative;
-  overflow: hidden;
+  background-image: linear-gradient(135deg, #a0db98, #bde0fe); /* Keep the gradient */
+  position: relative; /* Required for the pseudo-element to position itself relative to this container */
+  overflow: hidden; /* Ensures the pseudo-element doesn't spill outside the container */
+}
+
+.split-right::before {
+  content: ''; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%; 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  z-index: 1; 
+  opacity: 0.5; 
+  pointer-events: none; 
 }
 
 .floating-shape {
@@ -129,24 +189,35 @@ body {
   transform: translateX(-50%);
 }
 
+.content-section {
+  height: 200vh;
+}
+
 /* Content Box */
 .content-box {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.6); /* Transparent black */
+  background: rgba(0, 0, 0, 0.6); 
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   color: white;
   text-align: center;
   z-index: 1;
+  width: 30vw; /* Fixed width */
+  min-height: 50px; /* Ensure enough height for single-line text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content-box h1 {
   margin-bottom: 15px;
   font-size: 2rem;
+  /* white-space: nowrap;  */
+  overflow: hidden; /* Hide overflowing text during the typing effect */
 }
 
 .content-box p {
