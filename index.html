@@ -1,16 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quinnsane</title>
   <link rel="stylesheet" href="styles/style1.css">
 </head>
+
 <body>
+  <nav class="nav-bar">
+    <div id="toggleSidebar" class="bcontainer" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+    <script>
+      function myFunction(x) {
+        x.classList.toggle("change");
+      }
+    </script>
+    <script>
+      // Get references to the sidebar and the toggle button
+      // Select the sidebar and toggle button
+      const sidebar = document.querySelector('.sidebar');
+      const toggleButton = document.getElementById('toggleSidebar');
+
+      // Function to toggle sidebar visibility
+      toggleButton.addEventListener('click', () => {
+        sidebar.classList.toggle('hidden'); // Add or remove the 'hidden' class
+      });
+
+
+      // Add a click event listener to the toggle button
+      toggleButton.addEventListener('click', toggleSidebar);
+
+      // Add this code to open the sidebar initially
+      body.classList.add('sidebar-open');
+    </script>
+
+    <div class="sidebar hidden">
+      <h2>Menu</h2>
+      <ul class="sidebar-links">
+        <li><a href="#section1">Home</a></li>
+        <li><a href="#section2">About</a></li>
+        <li><a href="#section3">Services</a></li>
+        <li><a href="#section4">Contact</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <!-- Content Sections -->
   <div class="split-section" id="section1">
     <div class="split-left">
+
       <div class="logo-circle"></div>
     </div>
     <div class="split-right">
@@ -18,44 +63,27 @@
       <div class="floating-shape"></div>
       <div class="floating-shape"></div>
       <div class="content-box">
-        <h1>Hi, I'm Quinn</h1>
-        <p>This website is a work in progress!! </p>
+        <h1>
+          <a href="" class="typewrite" data-period="2000"
+            data-type='[ "Hi, I&apos;m Q!", "Welcome to my corner of the internet", "I am Creative.", "I Love to make Art." ]'>
+            <span class="wrap"></span>
+          </a>
+        </h1>
+        <!-- <p>This website is a work in progress!! </p> -->
       </div>
     </div>
   </div>
-  <!-- Sidebar Navigation -->
-  <div class="sidebar">
-    <h2>Menu</h2>
-    <ul class="sidebar-links">
-      <li><a href="#section1">Home</a></li>
-      <li><a href="#section2">About</a></li>
-      <li><a href="#section3">Services</a></li>
-      <li><a href="#section4">Contact</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-    </ul>
-  </div>
+  <br>
 
-
-  <div class="content-section" id="section2">
-    <h2>About Me! </h2>
-    <p>TODO</p>
-  </div>
-
-  <div class="content-section" id="section3">
-    <h2>More</h2>
-    <p>TODO</p>
-  </div>
-
-  <div class="content-section" id="section4">
-    <h2>More</h2>
-    <p>TODO</p>
+  <div class="content-section">
+    hi
   </div>
 
   <footer>
-    <p>© 2024 Your Creative Website. <a href="#">Back to top</a></p>
+    <p>footer<a href="#">Back to top</a></p>
   </footer>
 
   <script src="scripts/script.js"></script>
 </body>
+
 </html>
