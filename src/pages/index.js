@@ -7,18 +7,6 @@ export default function Home() {
   return (
     <div className="bg-[#EFF6E0] min-h-screen text-[#01161E] font-sans relative overflow-x-hidden">
 
-      {/* FLOATING SPARKLES */}
-      <motion.div
-        className="absolute top-16 left-12 w-2 h-2 bg-white rounded-full shadow"
-        animate={{ y: [0, -8, 0], x: [0, 4, 0] }}
-        transition={{ repeat: Infinity, duration: 4 }}
-      />
-      <motion.div
-        className="absolute top-48 right-10 w-3 h-3 bg-white rounded-full shadow"
-        animate={{ y: [0, -10, 0], x: [0, -5, 0] }}
-        transition={{ repeat: Infinity, duration: 5 }}
-      />
-
       {/* HERO */}
       <div className="flex flex-col items-center justify-center min-h-screen px-4 text-center relative z-10">
         <motion.img
@@ -121,7 +109,7 @@ export default function Home() {
             I used to focus on prismacolors + graphite realism. I achieved “Best of Show” at the Houston Rodeo in 2021, a gold medal in 2020, and a trip to State at VASE in 2021. I took a few years off for university, but now I’m back and working digitally! I&rsquo;m blending that my traditional foundation with more emotional themes.
           </p>
           <p className="mt-2 mb-2">
-            My style’s still figuring itself out! Sometimes it’s surreal themes, some days it’s bugs and human body, and sometimes it’s just a silly lil animal.
+            My style’s still figuring itself out! Sometimes it’s surreal themes, sometimes it’s bugs and human body, and sometimes it’s just a silly lil animal.
           </p>
           <Link
             href="/about"
