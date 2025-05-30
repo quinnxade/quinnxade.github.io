@@ -2,10 +2,17 @@
 import { motion } from "framer-motion";
 import Carousel from "../components/Carousel";
 import Link from "next/link";
+import Head from 'next/head';
+
 
 export default function Home() {
   return (
+    
     <div className="bg-[#EFF6E0] min-h-screen text-[#01161E] font-sans relative overflow-x-hidden">
+    <Head>
+      <title>quinnxade's portfolio</title>
+      <meta name="description" content="Online art portfolio of Quinn Xade" />
+    </Head>
 
       {/* HERO */}
       <div className="flex flex-col items-center justify-center min-h-screen px-4 text-center relative z-10">

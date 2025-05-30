@@ -2,8 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/portfolio/[category]": "pages/portfolio/[category].js",
-  "/portfolio": "pages/portfolio.js",
-  "/portfolio/[category]/[id]": "pages/portfolio/[category]/[id].js"
+  "/": "pages/index.js"
 }
