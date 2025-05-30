@@ -44,7 +44,7 @@ export default function Portfolio() {
                       alt={art.title}
                       className="w-full h-80 object-cover"
                     />
-                    <div className="p-3 text-sm text-gray-700" > 
+                    <div className="p-3 text-sm text-gray-700"  > 
                       <p className="font-semibold">{art.title}</p>
                       <p className="text-xs text-gray-500">
                         {art.year} · {art.medium}
