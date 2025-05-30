@@ -1,2 +1,0 @@
-# quinnxade.github.io
-hi
