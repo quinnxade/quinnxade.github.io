@@ -118,7 +118,7 @@ export default function Home() {
         <h2 className="text-3xl font-bold mb-8 text-white">About Me</h2>
         <div className="max-w-2xl mx-auto bg-[#EFF6E0] p-8 rounded-lg shadow-md text-[#01161E]">
           <p>
-            I used to focus on prismacolors + graphite realism. I achieved “Best of Show” at the Houston Rodeo in 2021, a gold medal in 2020, and a trip to State at VASE in 2021. I took a few years off for university, but now I’m back and working digitally! I'm blending that my traditional foundation with more emotional themes.
+            I used to focus on prismacolors + graphite realism. I achieved “Best of Show” at the Houston Rodeo in 2021, a gold medal in 2020, and a trip to State at VASE in 2021. I took a few years off for university, but now I’m back and working digitally! I&rsquo;m blending that my traditional foundation with more emotional themes.
           </p>
           <p className="mt-2 mb-2">
             My style’s still figuring itself out! Sometimes it’s surreal themes, some days it’s bugs and human body, and sometimes it’s just a silly lil animal.
@@ -204,7 +204,7 @@ export default function Home() {
         </div>
         <h2 className="text-3xl font-bold mb-4 text-white">Let’s make something together</h2>
         <p className="mb-6 max-w-xl mx-auto text-[#AEC3B0]">
-          Commissions are not open yet but you can contact me below if you'd be interested!
+          Commissions are not open yet but you can contact me below if you&rsquo;d be interested!
         </p>
         <a
           href="mailto:quinnxade@gmail.com"
