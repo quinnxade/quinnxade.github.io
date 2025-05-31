@@ -10,7 +10,7 @@ export default function Home() {
     
     <div className="bg-[#EFF6E0] min-h-screen text-[#01161E] font-sans relative overflow-x-hidden">
     <Head>
-      <title>quinnxade's portfolio</title>
+      <title>quinnxade&rsquo;s portfolio</title>
       <meta name="description" content="Online art portfolio of Quinn Xade" />
     </Head>
 
