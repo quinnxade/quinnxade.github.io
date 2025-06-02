@@ -195,11 +195,11 @@ export default function Home() {
         transition={{ duration: 0.6 }}
       >
         <div className="absolute top-10 left-6 rotate-[-8deg] text-white font-semibold text-sm">
-          🧷 commissions pending ... !
+          🧷 art shop stuff ... !
         </div>
-        <h2 className="text-3xl font-bold mb-4 text-white">Let’s make something together</h2>
+        <h2 className="text-3xl font-bold mb-4 text-white">Quinnxade art shop will be launching soon!</h2>
         <p className="mb-6 max-w-xl mx-auto text-[#AEC3B0]">
-          Commissions are not open yet but you can contact me below if you&rsquo;d be interested!
+          My shop is not open yet but check back later...!
         </p>
         <a
           href="mailto:quinnxade@gmail.com"
